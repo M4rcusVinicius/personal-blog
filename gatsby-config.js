@@ -7,6 +7,7 @@ module.exports = {
     description: `Este é meu blog`,
     author: `Marcus Vinicius Almeida Pires`,
     company: `Maquina do Mundo`,
+    position: `Programador & Estudante`,
     siteUrl: `https://https://personal-blog.netlify.app`,
   },
   plugins: [
