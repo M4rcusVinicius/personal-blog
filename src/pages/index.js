@@ -3,7 +3,8 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import About from "../components/Home/About" 
-import SubjectLinks from "../components/Home/SubjectLinks" 
+import Language from "../components/Home/Language" 
+import Info from "../components/Home/Info" 
 import NewPost from "../components/Home/NewPost"
 import PostGroup from "../components/Home/PostGroup"
 
@@ -11,8 +12,9 @@ const HomePage = () => (
   <Layout>
     <SEO title="Home" />
     <About />
+    <Info />
+    <Language />
     <NewPost />
-    <SubjectLinks />
     <PostGroup category="trabalho"/>
     <PostGroup category="redacao"/>
     <PostGroup category="resumo"/>
