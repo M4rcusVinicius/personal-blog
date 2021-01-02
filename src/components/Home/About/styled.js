@@ -1,17 +1,16 @@
 import styled from 'styled-components'
-import { Link } from "gatsby"
 
 export const AboutWrapper = styled.section`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--base);
+  background-color: var(--back);
   padding: 0rem 5rem;
-  height: calc(100vh - 5rem);
+  height: calc(100vh - 6.2rem);
 `
 
 export const AboutInfo = styled.div`
-  max-width: 30rem;
+  max-width: 45%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -19,66 +18,57 @@ export const AboutInfo = styled.div`
 `
 
 export const AboutTitle = styled.h1`
-  font-weight: 900;
-  color: var(--blueStrDark);
-  font-size: 3.5rem;
-  margin-top: 1rem;
+  font-weight: 700;
+  color: var(--title);
+  font-size: 3rem;
+  
+  line-height: 1;
+  letter-spacing: 0.1rem;
 `
-export const AboutCompany = styled.h3`
-  font-weight: 800;
-  color: var(--blue);
-  font-size: 2rem;
-  margin-top: 1rem;
-`
+
 export const AboutDescription = styled.p`
-  font-weight: 600;
-  color: var(--blueStrSoft);
+  font-weight: 500;
+  color: var(--soft);
   font-size: 1.2rem;
   margin-top: 3.2rem;
 `
 
-export const ButtonPrimary = styled(Link)`
-  padding: 1rem;
-  border-radius: 10px;
-  background: var(--blue);
-  border: 2px solid var(--blue);
-  color: var(--base);
-  font-weight: 600;
-  font-size: 1.2rem;
-  text-align: center;
-  text-decoration: none;
-  width: 10rem;
-  transition: 200ms;
-
-  &:hover {
-    background: var(--blueStrClear);
-    translate: 2px -4px;
-    border: 2px solid var(--blueStrClear);
-  }
-`
-
-export const Button = styled(Link)`
-  padding: 1rem;
-  border-radius: 10px;
-  color: var(--blue);
-  border: 2px solid var(--blue);
-  font-weight: 600;
-  font-size: 1.2rem;
-  text-align: center;
-  text-decoration: none;
-  width: 10rem;
-  transition: 200ms;
-
-  &:hover {
-    background: #d6e8ff;
-    border: 2px solid var(--blueStrClear);
-    translate: 2px -4px;
-  }
-`
 
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 22rem;
-  margin-top: 2.5rem;
+  width: 23rem;
+  margin-top: 3.2rem;
+`
+
+export const Button = styled.a`
+  display: inline-block;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+  border-radius: 10px;
+  color: var(--text);
+  border: 2px solid var(--button);
+  background-color: ${(props) => (props.primary ? 'var(--button)' : 'none')};
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  transition: 200ms;
+
+  &:hover {
+    box-shadow: inset 0 0 20px var(--btnHover),0 0 10px var(--btnHover);
+    border: 2px solid var(--btnHover);
+    transform: scale(1.02);
+  }
+`
+
+export const AboutIcon = styled.div`
+  display: block;
+  height: 1.5em;
+  width: 1.5rem;
+`
+
+export const AboutText = styled.div`
+  margin: 0 1rem;
 `
