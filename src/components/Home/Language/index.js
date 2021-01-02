@@ -17,7 +17,7 @@ const SubjectLinks = () => (
     <S.SubjectLinksList>
     
       <S.SubjectLinksItem >
-        <S.SubjectLinksLink className="link" to={`/python/`}>
+        <S.SubjectLinksLink className="link" to={`/`}>
           <S.SubjectLinksIcon>
             <Python />
           </S.SubjectLinksIcon>

@@ -13,86 +13,95 @@ export const SubjectLinksList = styled.ul`
 `
 
 export const SubjectLinksItem = styled.li`
-  --width: 14rem;
-  --height: 14rem;
+  --width: 12rem;
+  --height: 13rem;
 
   width: var(--width);
   height: var(--height);
-  background: transparent;
   position: relative;
-  display: inline-block;
-   outline: none;
-   border: none;
 
-   &:before, &:after {
+  &:before, &:after {
     position: absolute;
     content: "";
     right: 0;
     top: 0;
     background: rgba(2,126,251,1);
     transition: all 0.3s ease;
-   }
+  }
 
-   &:before {
+  &:before {
     height: 0%;
     width: 2px;
-   }
+  }
 
-   &:after {
+  &:after {
     width: 0%;
     height: 2px;
-   }
+  }
 
-   &:hover{
-      background: transparent;
-      box-shadow: none;
-    }
-    &:hover:before {
-      height: 100%;
-    }
-    &:hover:after {
-      width: 100%;
-    }
-    
-    & .link:before,
-    & .link:after {
-      position: absolute;
-      content: "";
-      left: 0;
-      bottom: 0;
-      background: rgba(2,126,251,1);
-      transition: all 0.3s ease;
-    }
-    & .link:before {
-      width: 2px;
-      height: 0%;
-    }
-    & .link:after {
-      width: 0%;
-      height: 2px;
-    }
-    & .link:hover:before {
-      height: 100%;
-    }
-    & .link:hover:after {
-      width: 100%;
-    }
+  &:hover{
+    background: transparent;
+    box-shadow: none;
+  }
+  &:hover:before {
+    height: 2rem;
+  }
+  &:hover:after {
+    width: 2rem;
+  }
+  &:active:hover:before {
+    transition: all 0.06s ease;
+    height: 100%;
+  }
+  &:active:hover:after {
+    transition: all 0.06s ease;
+    width: 100%;
+  }
+  
+  & .link:before,
+  & .link:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: rgba(2,126,251,1);
+    transition: all 0.3s ease;
+  }
+  & .link:before {
+    width: 2px;
+    height: 0%;
+  }
+  & .link:after {
+    width: 0%;
+    height: 2px;
+  }
+  & .link:hover:before {
+    height: 2rem;
+  }
+  & .link:hover:after {
+    width: 2rem;
+  }
+  & .link:active:hover:before {
+    transition: all 0.06s ease;
+    height: 100%;
+  }
+  & .link:active:hover:after {
+    transition: all 0.06s ease;
+    width: 100%;
+  }
 `
 
 export const SubjectLinksLink = styled(Link)`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  outline: none;
+  text-align: center; 
   text-decoration: none;
-  position: relative;
   display: block;
   width: 100%;
   height: 100%;
-  
-  &:hover {
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `
 
 export const SubjectLinksText = styled.h1`
