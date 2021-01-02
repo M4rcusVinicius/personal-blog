@@ -15,64 +15,75 @@ import * as S from "./styled"
 const SubjectLinks = () => (
   <S.SubjectLinksWrapper>
     <S.SubjectLinksList>
+    
       <S.SubjectLinksItem >
-        <S.SubjectLinksLink to={`/python/`}>
+        <S.SubjectLinksLink className="link" to={`/python/`}>
           <S.SubjectLinksIcon>
             <Python />
           </S.SubjectLinksIcon>
           <S.SubjectLinksText>Python</S.SubjectLinksText>
         </S.SubjectLinksLink>
       </S.SubjectLinksItem>
+
       <S.SubjectLinksItem >
-        <S.SubjectLinksLink to={`/javascript/`}>
+        <S.SubjectLinksLink className="link" to={`/javascript/`}>
           <S.SubjectLinksIcon>
             <Javascript />
           </S.SubjectLinksIcon>
           <S.SubjectLinksText>Javascript</S.SubjectLinksText>
         </S.SubjectLinksLink>
       </S.SubjectLinksItem>
+
       <S.SubjectLinksItem >
-        <S.SubjectLinksLink to={`/react/`}>
+        <S.SubjectLinksLink className="link" to={`/react/`}>
           <S.SubjectLinksIcon>
             <ReactLogo />
           </S.SubjectLinksIcon>
           <S.SubjectLinksText>React</S.SubjectLinksText>
         </S.SubjectLinksLink>
       </S.SubjectLinksItem>
+
       <S.SubjectLinksItem >
-        <S.SubjectLinksLink to={`/nodejs/`}>
+        <S.SubjectLinksLink className="link" to={`/nodejs/`}>
           <S.SubjectLinksIcon>
             <Nodejs />
           </S.SubjectLinksIcon>
           <S.SubjectLinksText>NodeJS</S.SubjectLinksText>
         </S.SubjectLinksLink>
       </S.SubjectLinksItem>
+    
+    </S.SubjectLinksList>
+    <S.SubjectLinksList>
+
       <S.SubjectLinksItem >
-        <S.SubjectLinksLink to={`/graphql/`}>
+        <S.SubjectLinksLink className="link" to={`/graphql/`}>
           <S.SubjectLinksIcon>
             <Graphql />
           </S.SubjectLinksIcon>
           <S.SubjectLinksText>GraphQL</S.SubjectLinksText>
         </S.SubjectLinksLink>
       </S.SubjectLinksItem>
+      
       <S.SubjectLinksItem >
-        <S.SubjectLinksLink to={`/gatsby/`}>
+        <S.SubjectLinksLink className="link" to={`/gatsby/`}>
           <S.SubjectLinksIcon>
             <Gatsby />
           </S.SubjectLinksIcon>
           <S.SubjectLinksText>Gatsby</S.SubjectLinksText>
         </S.SubjectLinksLink>
       </S.SubjectLinksItem>
+      
       <S.SubjectLinksItem >
-        <S.SubjectLinksLink to={`/css/`}>
+        <S.SubjectLinksLink className="link" to={`/css/`}>
           <S.SubjectLinksIcon>
             <Css3 />
           </S.SubjectLinksIcon>
           <S.SubjectLinksText>CSS</S.SubjectLinksText>
         </S.SubjectLinksLink>
       </S.SubjectLinksItem>
+      
       <S.SubjectLinksItem >
-        <S.SubjectLinksLink to={`/html/`}>
+        <S.SubjectLinksLink className="link" to={`/html/`}>
           <S.SubjectLinksIcon>
             <Html5 />
           </S.SubjectLinksIcon>
