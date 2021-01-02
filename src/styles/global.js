@@ -2,8 +2,7 @@ import { createGlobalStyle } from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
 
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
   /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -58,6 +57,9 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-size: 100%;
     font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.069rem;
   }
   img {
     display: block;
@@ -65,29 +67,22 @@ const GlobalStyles = createGlobalStyle`
   	height: auto;
   }
 
-  body.light {
-    --blue: #2c4be4;
-    --blueDark: #001789;
-    --blueSoft: #003e9b;
-    --blueClear: #2885ff;
-    --blueStrDark: #1b203a;
-    --blueStrSoft: #132e57;
-    --blueStrClear: #327ad9;
-    --dark: #0e0e0e;
-    --soft: #2a2a2a;
-    --clear: #6f6f6f;
-    --light: #d5d5d5;
-    --background: #F8F8F8;
-    --base: #fff;
-  }
+  body.light {}
 
   body.dark {
-    color: #C5CCD0;
+    color: #C7CDD6;
 
     --back: #080A0B;
-    --bottom: #121212;
+    --bottom: #121316;
+
+    --title: #69CEE8;
     --text: #E8F4FA;
-    --blueText: #39ACE7;
+    --info: #71A4D0;
+
+    --soft: #C7CDD6;
+    --button: #1E498A;
+    --btnHover: #1E60C2;
+    --hover: #00b8e4;
   }
 `
 export default GlobalStyles

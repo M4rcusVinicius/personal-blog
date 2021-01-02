@@ -8,9 +8,17 @@ export const FeaturedTitle = styled.h1`
 `
 
 export const Title = styled.h2`
-  font-weight: 800;
-  color: var(--blueStrDark);
+  font-weight: 700;
+  color: var(--title);
   font-size: 1.5rem;
+`
+
+export const SecTitle = styled.h2`
+  font-weight: 800;
+  color: var(--text);
+  font-size: 2.5rem;
+  text-align: ${(props) => (props.center ? 'center' : 'left')};
+  margin-bottom: 2.8rem; 
 `
 
 
