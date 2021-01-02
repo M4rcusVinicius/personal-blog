@@ -11,6 +11,21 @@ export const MenuFunctionWrapper = styled.div`
 
 
 export const MenuFunctionLink = styled(Link)`
+  cursor: pointer;
+  display: block;
+  height: 1.4rem;
+  position: relative;
+  width: 1.4rem;
+  color: var(--text);
+  transition: color 200ms;
+
+  &.light {
+    &:hover {
+    }
+  }
+  &:hover {
+    color: var(--hover);
+  }
 `
 
 export const MenuFunctionItem = styled.span`
@@ -19,7 +34,7 @@ export const MenuFunctionItem = styled.span`
   height: 1.4rem;
   position: relative;
   width: 1.4rem;
-  color: var(--clear);
+  color: var(--text);
   transition: color 200ms;
 
   &.light {
@@ -27,6 +42,6 @@ export const MenuFunctionItem = styled.span`
     }
   }
   &:hover {
-    color: var(--blue);
+    color: var(--hover);
   }
 `

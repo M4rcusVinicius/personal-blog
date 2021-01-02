@@ -4,16 +4,16 @@ const links = [
     url: "/",
   },
   {
-    label: "Resumo",
-    url: "/resumo/",
+    label: "Robótica",
+    url: "/robotica/",
   },
   {
-    label: "Trabalho",
+    label: "Programação",
     url: "/trabalho/",
   },
   {
-    label: "Redação",
-    url: "/redacao",
+    label: "Projetos",
+    url: "/projetos",
   },
   {
     label: "Sobre",
