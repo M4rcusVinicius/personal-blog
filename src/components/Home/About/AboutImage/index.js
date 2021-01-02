@@ -6,7 +6,7 @@ import * as S from './styled'
 const AboutImage = () => {
   const { aboutImage } = useStaticQuery(graphql`
     query {
-      aboutImage: file(relativePath: { eq: "aboutImage.png" }) {
+      aboutImage: file(relativePath: { eq: "profile.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
