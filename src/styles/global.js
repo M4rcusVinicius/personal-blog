@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
 
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
   /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -57,7 +57,7 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     font-size: 100%;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
   img {
     display: block;
@@ -82,10 +82,12 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body.dark {
-    --primaryBackground: #1A202C;
-    --secondaryBackground: #2D3748;
-    --activeBackground: #718096;
-    --border: #718096;
+    color: #C5CCD0;
+
+    --back: #080A0B;
+    --bottom: #121212;
+    --text: #E8F4FA;
+    --blueText: #39ACE7;
   }
 `
 export default GlobalStyles
