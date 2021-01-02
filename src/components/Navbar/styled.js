@@ -6,6 +6,5 @@ export const NavbarWrapper = styled.nav`
   align-items: center;
   background-color: var(--back);
   padding: 1.3rem;
-  box-shadow: 0px 0px 10px var(--light);
-  height: 5rem;
+  height: 6.2rem;
 `
