@@ -7,14 +7,14 @@ import * as S from './styled'
 const Logo = () => {
   const {
     site: {
-      siteMetadata: { title, company },
+      siteMetadata: { title, position },
     },
   } = useStaticQuery(graphql`
     query MySiteMetadata {
       site {
         siteMetadata {
           title
-          company
+          position
         }
       }
     }
@@ -26,7 +26,7 @@ const Logo = () => {
         <LogoImage />
         <S.LogoTextContent>
           <S.LogoText>{title}</S.LogoText>
-          <S.LogoCompany>Por {company}</S.LogoCompany>
+          <S.LogoPosition>{position}</S.LogoPosition>
         </S.LogoTextContent>
       </S.LogoLink>
     </S.LogoWrapper>

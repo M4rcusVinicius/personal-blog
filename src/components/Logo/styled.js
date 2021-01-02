@@ -15,14 +15,14 @@ export const LogoTextContent = styled.div`
 `
 
 export const LogoText = styled.h1`
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: var(--blueDark);
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--text);
 `
 
-export const LogoCompany = styled.h3`
-  font-weight:600;
-  font-size: 1rem;
+export const LogoPosition = styled.h3`
+  font-weight:500;
+  font-size: 0.85rem;
   margin-top: 0.2rem;
-  color: #132e57;
+  color: var(--info);
 `
