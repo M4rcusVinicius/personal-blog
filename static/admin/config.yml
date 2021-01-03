@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: M4rcusVinicius/personal-blog
-  branch: master
+  branch: main
   site_domain: https://personal-blog.netlify.app/
 
 publish_mode: editorial_workflow
