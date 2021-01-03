@@ -97,29 +97,29 @@ const PostGroup = ({category}) => {
     }
   `)
 
-  let categoryName = ""
   let postGroup = {}
+  let limit = 6
 
   if (category === "resumo") {
-    categoryName = "Resumos"
     postGroup = resumo.edges
   } else if (category === "trabalho") {
-    categoryName = "Trabalhos"
     postGroup = trabalho.edges
   } else if (category === "redacao") {
-    categoryName = "Redações"
     postGroup = redacao.edges
   } else {
-    categoryName = "Categoria não encontrada"
     postGroup = redacao.edges
+  }
+
+  if (document.body.id.includes("list")) {
+    limit = 3
   }
 
   return ( 
   <S.PostGroupWrapper>
-      <S.PostGroupTitle><CaretRightSquare className="icon" /> {categoryName} <S.Button to={category}><span>Ver mais</span></S.Button></S.PostGroupTitle>
+      <S.PostGroupTitle><CaretRightSquare className="icon" /> {category} <S.Button to={category}><span>Ver mais</span></S.Button></S.PostGroupTitle>
 
     <S.PostGroupContent>
-    {postGroup.map(
+    {postGroup.slice(0, limit).map(
       ({
         node: {
           frontmatter: { category, date, description, image, title, subject },
@@ -127,22 +127,21 @@ const PostGroup = ({category}) => {
           fields: { slug },
         },
       }) => {
-        
         return (
           <PostItem 
-          origin={{class: 'home', filter: null}}
-          slug={slug}
-          date={date}
-          title={title}
-          description={description}
-          category={category}
-          subject={subject}
-          timeToRead={timeToRead}
-          image={image}
+            origin={{class: 'home', filter: null}}
+            slug={slug}
+            date={date}
+            title={title}
+            description={description}
+            category={category}
+            subject={subject}
+            timeToRead={timeToRead}
+            image={image}
           />
           )
         } 
-        )}
+      )}
     </S.PostGroupContent>
         
   </S.PostGroupWrapper>

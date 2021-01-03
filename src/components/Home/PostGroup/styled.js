@@ -7,10 +7,13 @@ export const PostGroupWrapper = styled.section`
 
 export const PostGroupContent = styled.div`
   margin-top: 2rem;
-  display: grid;
-  grid-area: posts;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+
+  body#grid & {
+    display: grid;
+    grid-area: posts;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
 `
 
 export const PostGroupTitle = styled.h1`
