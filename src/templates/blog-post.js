@@ -3,9 +3,9 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Image from '../components/Image' 
+import Image from "../components/Image"
 
-import * as S from '../components/Post/styled'
+import * as S from "../components/Post/styled"
 
 const BlogPost = ({ data }) => {
   const post = data.markdownRemark
@@ -18,18 +18,25 @@ const BlogPost = ({ data }) => {
         image={post.frontmatter.image}
       />
       <S.PostWrapper>
-
         <S.PostArticle>
           <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
-          <S.PostInfo>{post.frontmatter.category} • {post.frontmatter.subject} • {post.timeToRead} min de leitura</S.PostInfo>
+          <S.PostInfo>
+            {post.frontmatter.category} • {post.frontmatter.subject} •{" "}
+            {post.timeToRead} min de leitura
+          </S.PostInfo>
 
-          <Image image={post.frontmatter.image} borderRadius="5px 5px 0 0" height="28rem" slug={post.frontmatter.title} origin={ class="blog-post" } />
+          <Image
+            image={post.frontmatter.image}
+            borderRadius="5px 5px 0 0"
+            height="28rem"
+            slug={post.frontmatter.title}
+            origin={{ class: "post", filter: "slug" }}
+          />
           <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
           <S.PostContent>
             <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
           </S.PostContent>
         </S.PostArticle>
-
       </S.PostWrapper>
     </Layout>
   )
