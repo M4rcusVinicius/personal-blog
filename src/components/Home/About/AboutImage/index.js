@@ -21,7 +21,11 @@ const AboutImage = () => {
     return <div>Imagem não encontrada</div>
   }
 
-  return <S.AboutImageWrapper fluid={aboutImage.childImageSharp.fluid} />
+  return (
+    <S.AboutImageWrapper>
+      <S.AboutImage fluid={aboutImage.childImageSharp.fluid} />
+    </S.AboutImageWrapper>
+  )
 }
 
 export default AboutImage
