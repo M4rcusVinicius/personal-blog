@@ -23,7 +23,7 @@ const BlogPost = ({ data }) => {
           <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
           <S.PostInfo>{post.frontmatter.category} • {post.frontmatter.subject} • {post.timeToRead} min de leitura</S.PostInfo>
 
-          <Image image={post.frontmatter.image} borderRadius="5px 5px 0 0" height="28rem" slug={post.frontmatter.title}/>
+          <Image image={post.frontmatter.image} borderRadius="5px 5px 0 0" height="28rem" slug={post.frontmatter.title} origin={ class="blog-post" } />
           <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
           <S.PostContent>
             <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
