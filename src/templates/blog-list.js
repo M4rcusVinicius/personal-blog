@@ -20,7 +20,11 @@ const BlogList = props => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+    <SEO
+      title={`Todos os posts`}
+    />
+    <S.ListWrapper>
+      
       <S.ListContent>
         {postList.map(
           ({
@@ -32,8 +36,8 @@ const BlogList = props => {
           }) => {
 
             return (
-              <PostItem 
-                origin={{class: 'home', filter: null}}
+              <PostItem  
+                origin={{class: 'subject', filter: subject}}
                 slug={slug}
                 date={date}
                 title={title}
@@ -47,17 +51,18 @@ const BlogList = props => {
           } 
         )}
       </S.ListContent>
-
-      <Pagination
-        isFirst={isFirst}
-        isLast={isLast}
-        currentPage={currentPage}
-        numPages={numPages}
-        prevPage={prevPage}
-        nextPage={nextPage}
-      />
-      
-    </Layout>
+    </S.ListWrapper>
+    
+    <Pagination
+      isFirst={isFirst}
+      isLast={isLast}
+      currentPage={currentPage}
+      numPages={numPages}
+      prevPage={prevPage}
+      nextPage={nextPage}
+    />
+    
+  </Layout>
   )
 }
 
