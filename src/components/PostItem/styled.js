@@ -12,37 +12,35 @@ export const PostItemLink = styled(Link)`
 `
 
 export const PostItemWrapper = styled.section`
-  background-color: var(--base);
-  padding: 0.5rem;
-  box-shadow: 0px 0px 5px var(--light);
-  border-radius: 10px;
+  background-color: var(--back);
+  border-radius: 8px;
   transition: 200ms;
+  padding: 1rem;
 
   &:hover {
     translate: 2px -4px;
-    box-shadow: -2px 4px 5px var(--light);
+    box-shadow: -2px 4px 5px var(--shadow);
   }
   
   body#grid & {
     flex-direction: column;
     justify-content: center;
-    max-width: 35rem;
   }
 `
 
 export const PostItemInfo = styled.div`
-  padding: 1.5rem 0.5rem 0.5rem;
+  padding: 1.2rem;
 `
 
 export const PostItemDescription = styled.p`
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 4; 
   -webkit-box-orient: vertical;
 
   margin: 1rem 0;
-  color: var(--clear);
+  color: var(--textSoft);
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
 `

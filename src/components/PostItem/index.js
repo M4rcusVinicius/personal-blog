@@ -40,11 +40,11 @@ const PostItem = ({
       <Image image={image} slug={slug} origin={origin}/>
     
       <S.PostItemInfo>
-        <G.Title>{title}</G.Title>
+        <G.SubTitle>{title}</G.SubTitle>
         <G.Info>{categoryName} • {subjectName} • {timeToRead} min</G.Info>
         <S.PostItemDescription>{description}</S.PostItemDescription>
       </S.PostItemInfo>
-
+ 
     </S.PostItemLink>
   </S.PostItemWrapper>
   )
