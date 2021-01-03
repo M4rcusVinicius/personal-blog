@@ -26,13 +26,20 @@ export const PaginationLink = styled(Link)`
   font-size: 1.2rem;
   line-height: 2rem;
 
-
   &:hover {
     translate: 1px -2px;
-    background-color: var(--btnHover)
+    background-color: var(--btnHover);
   }
+
 `
 
 export const PaginationContainer = styled.div`
   display: flex;
+  .active {
+    background-color: var(--btnHover);
+  }
+  .button {
+    background-color: #1d7930;
+  }
+
 `

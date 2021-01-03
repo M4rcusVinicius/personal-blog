@@ -1,10 +1,10 @@
 import React from "react"
 import propTypes from "prop-types"
 
-import { RewindRightOutline } from '@styled-icons/evaicons-outline/RewindRightOutline'
-import { RewindLeftOutline } from '@styled-icons/evaicons-outline/RewindLeftOutline'
-import { ArrowRightOutline } from '@styled-icons/evaicons-outline/ArrowRightOutline'
-import { ArrowLeftOutline } from '@styled-icons/evaicons-outline/ArrowLeftOutline'
+import { RewindRightOutline } from "@styled-icons/evaicons-outline/RewindRightOutline"
+import { RewindLeftOutline } from "@styled-icons/evaicons-outline/RewindLeftOutline"
+import { ArrowRightOutline } from "@styled-icons/evaicons-outline/ArrowRightOutline"
+import { ArrowLeftOutline } from "@styled-icons/evaicons-outline/ArrowLeftOutline"
 
 import * as S from "./styled"
 
@@ -15,52 +15,90 @@ const Pagination = ({
   numPages,
   prevPage,
   nextPage,
+  basePath,
 }) => {
-
   let start = 0
   let end = numPages
+  let haveEnd = false
+  let haveStart = false
   let pages = []
- 
-  if ( numPages < 5 + 1 | currentPage < 4) {
+
+  if ((numPages < 5 + 1) | (currentPage < 4)) {
     if (numPages > 5) {
       end = 5
+      haveEnd = false
     } else {
       end = numPages
     }
   } else {
     if (numPages - (currentPage + 2) < 0) {
-      console.log("Muito perto do fim")
       end = numPages
       start = currentPage - 4
     } else {
       start = currentPage - 2
       end = currentPage + 2
+      haveEnd = false
     }
   }
 
-  for (var i = start; i < end ; i++) {
-    pages.push({url: "/page/" + i, number: i + 1})
-    if (i === currentPage) {
-      console.log("=> /page/" + i)
+  if (currentPage > 3) {
+    haveStart = true
+  }
+
+  if (currentPage < numPages - 2) {
+    haveEnd = true
+  }
+
+  for (var i = start; i < end; i++) {
+    if (i === 0) {
+      pages.push({ url: `${basePath}`, number: i + 1 })
     } else {
-      console.log("/page/" + i)
+      pages.push({ url: `${basePath}pagina/` + (i + 1), number: i + 1 })
     }
   }
-  
-  return(
+
+  return (
     <S.PaginationWrapper>
       <S.PaginationContainer>
-        {!isFirst && <S.PaginationLink to={"/page/1"}> <RewindLeftOutline/> </S.PaginationLink>}
-        {!isFirst && <S.PaginationLink to={prevPage}> <ArrowLeftOutline/> </S.PaginationLink>}
+        {!(isFirst | (currentPage === 2)) && (
+          <S.PaginationLink className="button" to={basePath}>
+            <RewindLeftOutline />
+          </S.PaginationLink>
+        )}
+        {!isFirst && (
+          <S.PaginationLink className="button" to={prevPage}>
+            <ArrowLeftOutline />
+          </S.PaginationLink>
+        )}
+        {haveStart && (
+          <S.PaginationLink to={`${basePath}pagina/${currentPage - 2}`}>
+            ...
+          </S.PaginationLink>
+        )}
         {pages.map((page, index) => {
           console.log("URL: " + page.url)
           console.log("Number: " + page.number)
           return (
-            <S.PaginationLink key={i}>{page.number}</S.PaginationLink>
+            <S.PaginationLink to={page.url} key={i} activeClassName="active">
+              {page.number}
+            </S.PaginationLink>
           )
         })}
-        {!isLast && <S.PaginationLink to={nextPage}> <ArrowRightOutline /> </S.PaginationLink>}
-        {!isLast && <S.PaginationLink to={"/page/" + numPages}> <RewindRightOutline /> </S.PaginationLink>}
+        {haveEnd && (
+          <S.PaginationLink to={`${basePath}pagina/${currentPage + 3}`}>
+            ...
+          </S.PaginationLink>
+        )}
+        {!isLast && (
+          <S.PaginationLink className="button" to={nextPage}>
+            <ArrowRightOutline />{" "}
+          </S.PaginationLink>
+        )}
+        {!(isLast | (currentPage === numPages - 1)) && (
+          <S.PaginationLink className="button" to={`${basePath}pagina/` + numPages}>
+            <RewindRightOutline />
+          </S.PaginationLink>
+        )}
       </S.PaginationContainer>
     </S.PaginationWrapper>
   )
@@ -72,6 +110,7 @@ Pagination.propTypes = {
   numPages: propTypes.number.isRequired,
   prevPage: propTypes.string,
   nextPage: propTypes.string,
+  basePath: propTypes.string,
 }
 
 export default Pagination

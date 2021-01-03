@@ -14,8 +14,9 @@ const BlogCategory = props => {
   const {  currentPage, numCategoryPages, category } = props.pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numCategoryPages
-  const prevPage = currentPage - 1 === 1 ? `/${category}/` : `/${category}/page/${currentPage - 1}`
-  const nextPage = `/${category}/page/${currentPage + 1}`
+  const prevPage = currentPage - 1 === 1 ? `/${category}/` : `/${category}/pagina/${currentPage - 1}`
+  const nextPage = `/${category}/pagina/${currentPage + 1}`
+  const basePath = `/${category}/`
 
   return (
     <Layout>
@@ -61,6 +62,7 @@ const BlogCategory = props => {
         numPages={numCategoryPages}
         prevPage={prevPage}
         nextPage={nextPage}
+        basePath={basePath}
       />
       
     </Layout>
