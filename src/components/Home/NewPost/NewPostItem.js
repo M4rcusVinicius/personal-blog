@@ -45,7 +45,7 @@ const NewPostItem = ({
 
         <Image image={image} slug={slug} width="25rem" height="19rem" origin={origin}/>
       
-        <S.NewPostItemInfoContainer>
+        <S.NewPostItemInfoContainer reverse={reverse}>
           <S.NewPostItemTitle>{title}</S.NewPostItemTitle>
           <S.NewPostItemInfo>{categoryName} • {subjectName} • {timeToRead} min</S.NewPostItemInfo>
           <S.NewPostItemDescription>{description}</S.NewPostItemDescription>

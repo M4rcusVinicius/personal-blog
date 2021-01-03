@@ -44,12 +44,6 @@ const NewPost = () => {
 
   return (
     <S.NewPostWrapper>
-      
-      <G.Blockquote> 
-        <G.BlockquoteBorder />
-        <G.BlockquoteText>Postagens novas</G.BlockquoteText>
-        <G.BlockquoteLink to="page/1">Ver Mais</G.BlockquoteLink>
-      </G.Blockquote>
 
       {newPost.map(
             ({
