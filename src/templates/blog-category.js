@@ -17,14 +17,6 @@ const BlogCategory = props => {
   const prevPage = currentPage - 1 === 1 ? `/${category}/` : `/${category}/page/${currentPage - 1}`
   const nextPage = `/${category}/page/${currentPage + 1}`
 
-  let categoryName = ''
-
-  if (category === 'redacao') {
-    categoryName = 'Redação'
-  } else if (category != null) {
-    categoryName = category[0].toUpperCase() + category.slice(1)
-  }
-
   return (
     <Layout>
       <SEO
@@ -32,7 +24,7 @@ const BlogCategory = props => {
       />
       <S.ListWrapper>
 
-        <S.ListTitle>{categoryName}</S.ListTitle>
+        <S.ListTitle>{category}</S.ListTitle>
       
         <S.ListContent>
           {postCategory.map(

@@ -17,14 +17,6 @@ const BlogSubject = props => {
   const prevPage = currentPage - 1 === 1 ? `/${subject}/` : `/${subject}/page/${currentPage - 1}`
   const nextPage = `/${subject}/page/${currentPage + 1}`
 
-  let subjectName = ''
-
-  if (subject === 'redacao') {
-    subjectName = 'Redação'
-  } else if (subject != null) {
-    subjectName = subject[0].toUpperCase() + subject.slice(1)
-  }
-
   return (
     <Layout>
       <SEO
@@ -32,7 +24,7 @@ const BlogSubject = props => {
       />
       <S.ListWrapper>
 
-        <S.ListTitle>{subjectName}</S.ListTitle>
+        <S.ListTitle>{subject}</S.ListTitle>
         
         <S.ListContent>
           {postSubject.map(
