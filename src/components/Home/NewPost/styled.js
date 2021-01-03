@@ -3,12 +3,15 @@ import { Link } from "gatsby"
 
 export const NewPostWrapper = styled.section`
   width: 100%;
-  padding: 4rem 10rem;
+  padding: 4rem 6rem;
 `
 
 export const NewPostItemWrapper = styled.div`
-  margin: 3rem 0;
+  background-color: var(--back);
+  border-radius: 8px;
   transition: 200ms;
+  padding: 1rem;
+  margin: 4rem 0;
 
   &:hover {
     translate: 2px -4px;
@@ -19,30 +22,27 @@ export const NewPostItemCardContent = styled.div`
   display: flex;
   justify-content: ${props => props.reverse ? "flex-start" : "flex-end"};
   position: relative;
-  top: -1.2rem;
-  left: ${props => props.reverse ? "-1.5rem" : "1.5rem"};
+  top: -1.8rem;
+  left: ${props => props.reverse ? "-1.8rem" : "1.8rem"};
 `
 
 export const NewPostItemCard = styled.div`
   text-align: center;
   background: #6B66F9;
-  border-radius: 10px;
-  font-size: 1.5rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
   font-weight: 800;
   color: var(--base);
   position: absolute;
-  transform: ${props => props.reverse ? "rotate(-15deg)" : "rotate(15deg)"};
-  padding: 1rem 2rem;
+  transform: ${props => props.reverse ? "rotate(-12deg)" : "rotate(12deg)"};
+  padding: 0.7rem 1.7rem;
 `
 
 export const NewPostItemLink = styled(Link)`
   text-decoration: none;
   display: flex;
-  background-color: var(--base);
-  padding: 0.5rem;
-  box-shadow: 0px 0px 5px var(--light);
-  border-radius: 10px;
-  height: 20rem;
+  border-radius: 5px;
+  height: 19rem;
   flex-direction: ${props => props.reverse ? "row-reverse" : "row"};
   transition: 200ms;
 
@@ -51,28 +51,22 @@ export const NewPostItemLink = styled(Link)`
   }
 `
 
-export const NewPostItemNew = styled.div`
-  padding: 2rem;
-  background: red;  
-`
-
 export const NewPostItemInfoContainer = styled.div`
-  padding: 2rem;
+  padding: ${props => props.reverse ? "2rem 2rem 2rem 0" : "2rem 0 2rem 2rem"};;
   width: 60%;
 `
 
 export const NewPostItemTitle = styled.div`
-  margin: 1rem 0;
-  color: var(--blueStrDark);
+  color: var(--text);
   font-size: 2rem;
   font-weight: 800;
 `
 
 export const NewPostItemInfo = styled.div`
-  margin: 1rem 0;
-  color: var(--blue);
+  color: var(--title);
   font-size: 1.4rem;
-  font-weight: 800;
+  font-weight: 700;
+  margin: 1.2rem 0;
 `
 
 export const NewPostItemDescription = styled.p`
@@ -82,9 +76,8 @@ export const NewPostItemDescription = styled.p`
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
 
-  margin: 1rem 0;
-  color: var(--clear);
-  font-size: 1.3rem;
-  font-weight: 600;
+  color: var(--textSoft);
+  font-size: 1.2rem;
+  font-weight: 500;
 `
 
