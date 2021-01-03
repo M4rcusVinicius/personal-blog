@@ -1,6 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
+import { CaretRightSquare } from '@styled-icons/boxicons-regular/CaretRightSquare'
+
 import PostItem from '../../PostItem'
 
 import * as S from './styled'
@@ -115,11 +117,7 @@ const PostGroup = ({category}) => {
 
   return ( 
   <S.PostGroupWrapper>
-    <G.Blockquote> 
-      <G.BlockquoteBorder />
-      <G.BlockquoteText>{categoryName}</G.BlockquoteText>
-      <G.BlockquoteLink to={category}>Ver Mais</G.BlockquoteLink>
-    </G.Blockquote>
+      <S.PostGroupTitle><CaretRightSquare className="icon" /> {categoryName} <S.Button to={category}><span>Ver mais</span></S.Button></S.PostGroupTitle>
 
     <S.PostGroupContent>
     {postGroup.map(
@@ -130,23 +128,24 @@ const PostGroup = ({category}) => {
           fields: { slug },
         },
       }) => {
-
+        
         return (
           <PostItem 
-            origin={{class: 'home', filter: null}}
-            slug={slug}
-            date={date}
-            title={title}
-            description={description}
-            category={category}
-            subject={subject}
-            timeToRead={timeToRead}
-            image={image}
+          origin={{class: 'home', filter: null}}
+          slug={slug}
+          date={date}
+          title={title}
+          description={description}
+          category={category}
+          subject={subject}
+          timeToRead={timeToRead}
+          image={image}
           />
-        )
-      } 
-    )}
+          )
+        } 
+        )}
     </S.PostGroupContent>
+        
   </S.PostGroupWrapper>
   )
 }
