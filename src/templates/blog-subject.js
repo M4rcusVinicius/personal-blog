@@ -7,7 +7,6 @@ import PostItem from '../components/PostItem'
 import Pagination from '../components/Pagination'
 
 import * as S from "../components/PostList/styled"
-import * as G from "../styles/GlobalComponents"
 
 const BlogSubject = props => {
   const postSubject = props.data.allMarkdownRemark.edges    
@@ -33,7 +32,7 @@ const BlogSubject = props => {
       />
       <S.ListWrapper>
 
-        <G.FeaturedTitle>{subjectName}</G.FeaturedTitle>
+        <S.ListTitle>{subjectName}</S.ListTitle>
         
         <S.ListContent>
           {postSubject.map(

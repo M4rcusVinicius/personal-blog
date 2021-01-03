@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import NewPostItem from "./NewPostItem"
 
 import * as S from './styled'
-import * as G from "../../../styles/GlobalComponents"
 
 const NewPost = () => {
   const data = useStaticQuery(graphql`

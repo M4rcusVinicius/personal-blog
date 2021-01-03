@@ -44,3 +44,17 @@ export const PostItemDescription = styled.p`
   font-size: 1rem;
   font-weight: 500;
 `
+
+export const PostItemTitle = styled.h1`
+  font-weight: 700;
+  color: var(--text);
+  font-size: 1.7rem;
+  text-align: ${(props) => (props.center ? 'center' : 'left')};
+`
+
+export const PostItemInfoText = styled.h3`
+  margin: 0.8rem 0;
+  color: var(--hover);
+  font-size: 1.05rem;
+  font-weight: 600;
+`

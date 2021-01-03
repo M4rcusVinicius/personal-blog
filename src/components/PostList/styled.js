@@ -14,3 +14,9 @@ export const ListContent = styled.section`
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
 `
+
+export const ListTitle = styled.h1`
+  font-weight: 900;
+  color: var(--blueStrDark);
+  font-size: 3.5rem;
+`

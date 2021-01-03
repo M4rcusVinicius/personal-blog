@@ -6,7 +6,6 @@ import { CaretRightSquare } from '@styled-icons/boxicons-regular/CaretRightSquar
 import PostItem from '../../PostItem'
 
 import * as S from './styled'
-import * as G from "../../../styles/GlobalComponents"
 
 const PostGroup = ({category}) => {
   const { redacao, trabalho, resumo } = useStaticQuery(graphql`

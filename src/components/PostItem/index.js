@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 
 import Image from '../Image' 
 import * as S from "./styled"
-import * as G from "../../styles/GlobalComponents"
 
 const PostItem = ({
   slug,
@@ -40,8 +39,8 @@ const PostItem = ({
       <Image image={image} slug={slug} origin={origin}/>
     
       <S.PostItemInfo>
-        <G.SubTitle>{title}</G.SubTitle>
-        <G.Info>{categoryName} • {subjectName} • {timeToRead} min</G.Info>
+        <S.PostItemTitle>{title}</S.PostItemTitle>
+        <S.PostItemInfoText>{categoryName} • {subjectName} • {timeToRead} min</S.PostItemInfoText>
         <S.PostItemDescription>{description}</S.PostItemDescription>
       </S.PostItemInfo>
  
