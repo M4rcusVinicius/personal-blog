@@ -73,16 +73,19 @@ const GlobalStyles = createGlobalStyle`
     color: #C7CDD6;
 
     --back: #080A0B;
-    --bottom: #121316;
+    --bottom: #26282C;
 
     --title: #69CEE8;
+    --subTitle: #84B4E8;
     --text: #E8F4FA;
+    --textSoft: #C7CDD6;
     --info: #71A4D0;
 
     --soft: #C7CDD6;
     --button: #1E498A;
     --btnHover: #1E60C2;
     --hover: #00b8e4;
+    --shadow: black;
   }
 `
 export default GlobalStyles

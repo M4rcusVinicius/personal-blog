@@ -13,21 +13,19 @@ export const Title = styled.h2`
   font-size: 1.5rem;
 `
 
-export const SecTitle = styled.h2`
-  font-weight: 800;
+export const SubTitle = styled.h2`
+  font-weight: 700;
   color: var(--text);
-  font-size: 2.5rem;
+  font-size: 1.7rem;
   text-align: ${(props) => (props.center ? 'center' : 'left')};
-  margin-bottom: 2.8rem; 
 `
 
 
 export const Info = styled.p`
   margin: 0.8rem 0;
-  color: var(--blueStrClear);
+  color: var(--hover);
   font-size: 1.05rem;
   font-weight: 600;
-
 `
 
 export const Text = styled.p`
