@@ -69,7 +69,7 @@ const GlobalStyles = createGlobalStyle`
 
   body.light {}
 
-  body.dark {
+  body.cyber {
     color: #C7CDD6;
 
     --back: #080A0B;

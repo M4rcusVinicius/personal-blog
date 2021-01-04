@@ -36,7 +36,7 @@ export const SelectOptions = styled.div`
   padding: 1rem 0 0;
   left: -1rem;
   width: 8rem;
-  top: -8rem;
+  top: -10rem;
   border-radius: 0 0 8px 8px;
   border: solid #71a4d0 2px; 
   border-top: none;
@@ -48,15 +48,17 @@ export const SelectOptions = styled.div`
   }
 `
 
-export const SelectItem = styled.span`
+export const SelectItem = styled.div`
   cursor: pointer;
-  display: block;
-  height: 1.4rem;
-  position: relative;
-  width: 1.4rem;
   color: var(--text);
   transition: color 200ms;
-  margin-bottom: 1rem;
+  padding: 1rem 0.8;
+  display: flex;
+  font-size: 1rem;
+
+  p {
+    margin-top: 0.2rem;
+  }
 
   &:hover {
     color: var(--hover);
@@ -67,13 +69,12 @@ export const SelectIcon = styled.span`
   cursor: pointer;
   display: block;
   height: 1.4rem;
-  position: relative;
   width: 1.4rem;
   color: var(--text);
   transition: color 200ms;
-  margin-bottom: 1rem;
+  margin: 0 0.5rem 1.5rem 1rem;
 
-  &:hover {
+  ${SelectItem}:hover & {
     color: var(--hover);
   }
 `

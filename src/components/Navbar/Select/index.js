@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react"
 import { Eye } from "@styled-icons/fa-regular/Eye"
 import { Moon } from "@styled-icons/boxicons-regular/Moon"
 import { Brightness } from "@styled-icons/boxicons-regular/Brightness"
+import { Coffee } from "@styled-icons/boxicons-regular/Coffee"
 
 import * as S from "./styled"
 
@@ -28,7 +29,7 @@ const Select = () => {
             window.__setPreferredTheme("light")
           }}
         >
-          <S.SelectIcon><Brightness /></S.SelectIcon>
+          <S.SelectIcon><Brightness /></S.SelectIcon> <p>Light</p>
         </S.SelectItem>
         <S.SelectItem
           title="Mudar o tema"
@@ -36,7 +37,15 @@ const Select = () => {
             window.__setPreferredTheme("dark")
           }}
         >
-          <S.SelectIcon><Moon /></S.SelectIcon>
+          <S.SelectIcon><Moon /></S.SelectIcon> <p>Dark</p>
+        </S.SelectItem>
+        <S.SelectItem
+          title="Mudar o tema"
+          onClick={() => {
+            window.__setPreferredTheme("cyber")
+          }}
+        >
+          <S.SelectIcon><Coffee /></S.SelectIcon> <p>Cyber</p>
         </S.SelectItem>
       </S.SelectOptions>
     </S.SelectWrapper>
