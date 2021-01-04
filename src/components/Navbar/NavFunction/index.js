@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 
-import Select from './Select'
+import Select from '../Select'
 
 //import { Moon } from "@styled-icons/boxicons-regular/Moon"
 //import { Brightness } from "@styled-icons/boxicons-regular/Brightness"

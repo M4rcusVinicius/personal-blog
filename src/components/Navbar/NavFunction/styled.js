@@ -5,19 +5,21 @@ export const MenuFunctionWrapper = styled.div`
   align-items: center;
   display: flex;
   flex-direction: row;
-  width: 8rem;
   justify-content: space-between;
+  --size: 3.5rem;
 `
 
 
 export const MenuFunctionLink = styled(Link)`
   cursor: pointer;
   display: block;
-  height: 1.4rem;
+  height: var(--size);
   position: relative;
-  width: 1.4rem;
+  width: var(--size);
   color: var(--text);
   transition: color 200ms;
+  position: relative;
+  z-index: 4;
 
   &.light {
     &:hover {
@@ -31,11 +33,14 @@ export const MenuFunctionLink = styled(Link)`
 export const MenuFunctionItem = styled.span`
   cursor: pointer;
   display: block;
-  height: 1.4rem;
+  height: var(--size);
   position: relative;
-  width: 1.4rem;
+  width: var(--size);
+  padding: 1rem;
   color: var(--text);
   transition: color 200ms;
+  position: relative;
+  z-index: 4;
 
   &.light {
     &:hover {
