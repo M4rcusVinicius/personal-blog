@@ -17,7 +17,7 @@ export const PostGroupContent = styled.div`
 `
 
 export const PostGroupTitle = styled.h1`
-  color: var(--info);
+  color: var(--textSoftTitle);
   font-size: 3.8rem;
   font-weight: 700;
   display: flex;
@@ -53,8 +53,8 @@ export const Button = styled(Link)`
   }
 
   &:hover {
-    box-shadow: inset 0 0 20px var(--btnHover),0 0 10px var(--btnHover);
-    border: 2px solid var(--btnHover);
+    box-shadow: inset 0 0 20px var(--buttonHover),0 0 10px var(--buttonHover);
+    border: 2px solid var(--buttonHover);
     transform: scale(1.02);
   }
 `
