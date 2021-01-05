@@ -51,5 +51,5 @@ export const InfoIcon = styled.span`
   width: 5rem;
   position: relative;
   margin: 0 auto; 
-  color: #1AABFF;
+  color: var(--icon);
 `
