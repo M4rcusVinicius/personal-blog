@@ -9,7 +9,7 @@ export const Image = styled(Img)`
   max-width: ${props => props.maxWidth};
 
   body#grid & {
-    width: ${props => props.width ? props.width : "100%"};
+    width: ${props => props.width};
   }
 `
 
@@ -18,6 +18,6 @@ export const ImageNotFound = styled(Img)`
   height: ${props => props.height ? props.height : "14rem"};
   width: ${props => props.width};
   max-height: ${props => props.maxHeight};
-  max-width: ${props => props.maxHWdth};
-  background-color: var(--light);
+  max-width: ${props => props.maxWidth};
+  background-color: var(--textSoft);
 `

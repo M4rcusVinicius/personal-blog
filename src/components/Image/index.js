@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import * as S from "./styled"
 
 const Image = ({image, slug, height, width, maxHeight, maxWidth, borderRadius, origin}) => {
-
   if (image?.childImageSharp?.fluid) {
     const featuredImage = image.childImageSharp.fluid
     return(<S.Image 
