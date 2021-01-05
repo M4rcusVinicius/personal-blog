@@ -1,13 +1,12 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
 import { CaretRightSquare } from '@styled-icons/boxicons-regular/CaretRightSquare'
-
 import PostItem from '../../PostItem'
 
 import * as S from './styled'
 
 const PostGroup = ({category}) => {
+
   const { redacao, trabalho, resumo } = useStaticQuery(graphql`
     query {
       redacao: allMarkdownRemark(
@@ -98,7 +97,6 @@ const PostGroup = ({category}) => {
   `)
 
   let postGroup = {}
-  let limit = 6
 
   if (category === "resumo") {
     postGroup = resumo.edges
@@ -110,16 +108,12 @@ const PostGroup = ({category}) => {
     postGroup = redacao.edges
   }
 
-  if (document.body.id.includes("list")) {
-    limit = 3
-  }
-
   return ( 
   <S.PostGroupWrapper>
       <S.PostGroupTitle><CaretRightSquare className="icon" /> {category} <S.Button to={category}><span>Ver mais</span></S.Button></S.PostGroupTitle>
 
     <S.PostGroupContent>
-    {postGroup.slice(0, limit).map(
+    {postGroup.slice(0, 6).map(
       ({
         node: {
           frontmatter: { category, date, description, image, title, subject },

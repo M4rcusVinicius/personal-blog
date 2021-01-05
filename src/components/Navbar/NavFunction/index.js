@@ -11,18 +11,14 @@ import { SearchAlt2 as Search } from "@styled-icons/boxicons-regular/SearchAlt2"
 import * as S from "./styled"
 
 const MenuFunction = () => {
-  //const [theme, setTheme] = useState(null)
-  const [display, setDisplay] = useState(null)
+  const [DisplayMode, setDisplayMode] = useState(null)
 
-  //const isDarkMode = theme === "dark"
-  const isListMode = display === "list"
+  const isListMode = DisplayMode === "list"
 
   useEffect(() => {
-    //setTheme(window.__theme)
-    setDisplay(window.__display)
+    setDisplayMode(window.__display)
 
-    //window.__onThemeChange = () => setTheme(window.__theme)
-    window.__onDisplayChange = () => setDisplay(window.__display)
+    window.__onDisplayChange = () => setDisplayMode(window.__display)
   }, [])
 
   return (
