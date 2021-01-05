@@ -93,7 +93,7 @@ const GlobalStyles = createGlobalStyle`
     --button: #264e80; //#1e498a;
     --buttonHover: #2374E1; //#1E60C2;
     --buttonHoverSec: #2e3239; //#1E60C2;
-    --buttonPagination: //#1d7930;
+    --buttonPagination: #1d7930;
     --linkHover: #2e89ff; //#10A1E8;
     --link: #2e89ff; //#227BA6;
     --icon: #3999ff; //#1AABFF;

@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 export const Image = styled(Img)`
   border-radius: ${props => props.borderRadius ? props.borderRadius : "9px "};
   height: ${props => props.height ? props.height : "18rem"};
-  width: ${props => props.width ? props.width : "30%"};
+  width: ${props => props.postItem === "true" ? "30%" : props.width };
   max-height: ${props => props.maxHeight};
   max-width: ${props => props.maxWidth};
 

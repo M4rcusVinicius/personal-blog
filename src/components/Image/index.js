@@ -3,13 +3,14 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import * as S from "./styled"
 
-const Image = ({image, slug, height, width, maxHeight, maxWidth, borderRadius, origin}) => {
+const Image = ({image, slug, height, postItem, width, maxHeight, maxWidth, borderRadius, origin}) => {
   if (image?.childImageSharp?.fluid) {
     const featuredImage = image.childImageSharp.fluid
     return(<S.Image 
             fluid={featuredImage} 
             height={height}
             width={width}
+            postItem={postItem}
             maxHeight={maxHeight}
             maxWidth={maxWidth}
             borderRadius={borderRadius}
@@ -24,6 +25,7 @@ const Image = ({image, slug, height, width, maxHeight, maxWidth, borderRadius, o
     return(<DefaultFeaturedImage
             height={height}
             width={width}
+            postItem
             maxHeight={maxHeight}
             maxWidth={maxWidth}
             borderRadius={borderRadius}
@@ -35,7 +37,7 @@ const Image = ({image, slug, height, width, maxHeight, maxWidth, borderRadius, o
 export default Image
 
 
-const DefaultFeaturedImage = ({image, slug, height, width, maxHeight, maxWidth, borderRadius}) => {
+const DefaultFeaturedImage = ({image, slug, postItem, height, width, maxHeight, maxWidth, borderRadius}) => {
   const { defaultFeaturedImage } = useStaticQuery(graphql`
     query {
       defaultFeaturedImage: file(relativePath: { eq: "default-featuredImage.png" }) {
