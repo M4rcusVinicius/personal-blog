@@ -11,18 +11,18 @@ export const LogoLink = styled(Link)`
 `
 
 export const LogoTextContent = styled.div`
- margin-left: 0.4rem
+ margin-left: 0.4rem;
 `
 
 export const LogoText = styled.h1`
   font-weight: 600;
   font-size: 1.4rem;
-  color: var(--text);
+  color: var(--textLogo);
 `
 
 export const LogoPosition = styled.h3`
   font-weight:500;
   font-size: 0.85rem;
   margin-top: 0.2rem;
-  color: var(--info);
+  color: var(--textInfo);
 `
