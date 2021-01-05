@@ -28,11 +28,11 @@ export const NewPostItemCardContent = styled.div`
 
 export const NewPostItemCard = styled.div`
   text-align: center;
-  background: #6B66F9;
+  background: var(--card);
   border-radius: 5px;
   font-size: 1.2rem;
   font-weight: 800;
-  color: var(--base);
+  color: var(--cardText);
   position: absolute;
   transform: ${props => props.reverse ? "rotate(-12deg)" : "rotate(12deg)"};
   padding: 0.7rem 1.7rem;
@@ -45,10 +45,10 @@ export const NewPostItemLink = styled(Link)`
   height: 19rem;
   flex-direction: ${props => props.reverse ? "row-reverse" : "row"};
   transition: 200ms;
+`
 
-  &:hover {
-    box-shadow: -2px 4px 5px var(--light);
-  }
+export const NewPostItemImage = styled.div`
+  width: 25rem;
 `
 
 export const NewPostItemInfoContainer = styled.div`
@@ -57,13 +57,13 @@ export const NewPostItemInfoContainer = styled.div`
 `
 
 export const NewPostItemTitle = styled.div`
-  color: var(--text);
+  color: var(--textIntense);
   font-size: 2rem;
   font-weight: 800;
 `
 
 export const NewPostItemInfo = styled.div`
-  color: var(--title);
+  color: var(--textInfo);
   font-size: 1.4rem;
   font-weight: 700;
   margin: 1.2rem 0;
