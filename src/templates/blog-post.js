@@ -31,6 +31,7 @@ const BlogPost = ({ data }) => {
             height="28rem"
             slug={post.frontmatter.title}
             origin={{ class: "post", filter: "slug" }}
+            width="auto"
           />
           <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
           <S.PostContent>
