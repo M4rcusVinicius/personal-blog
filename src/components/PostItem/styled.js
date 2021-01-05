@@ -49,7 +49,7 @@ export const PostItemDescription = styled.p`
   -webkit-box-orient: vertical;
 
   margin: 1rem 0;
-  color: var(--textSoft);
+  color: var(--textDescription);
   font-size: 1.1rem;
   font-weight: 500;
 
@@ -60,7 +60,7 @@ export const PostItemDescription = styled.p`
 
 export const PostItemTitle = styled.h1`
   font-weight: 700;
-  color: var(--text);
+  color: var(--textTitle);
   font-size: 1.8rem;
   text-align: ${(props) => (props.center ? 'center' : 'left')};
 
@@ -71,7 +71,7 @@ export const PostItemTitle = styled.h1`
 
 export const PostItemInfoText = styled.h3`
   margin: 0.8rem 0;
-  color: var(--hover);
+  color: var(--textInfo);
   font-size: 1.15rem;
   font-weight: 600;
 

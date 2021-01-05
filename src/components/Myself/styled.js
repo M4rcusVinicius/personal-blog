@@ -11,18 +11,18 @@ export const MyselfLink = styled(Link)`
 `
 
 export const MyselfTextContent = styled.div`
- margin-left: 0.4rem
+ margin-left: 0.4rem;
 `
 
 export const MyselfText = styled.h1`
   font-weight: 700;
   font-size: 1.2rem;
-  color: var(--blueDark);
+  color: var(--textLogo);
 `
 
 export const MyselfCompany = styled.h3`
   font-weight:600;
   font-size: 1rem;
   margin-top: 0.2rem;
-  color: #132e57;
+  color: var(--textInfo);
 `

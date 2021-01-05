@@ -17,6 +17,6 @@ export const ListContent = styled.section`
 
 export const ListTitle = styled.h1`
   font-weight: 900;
-  color: #71a4d0;
+  color: var(--postListTitle);
   font-size: 3.5rem;
 `

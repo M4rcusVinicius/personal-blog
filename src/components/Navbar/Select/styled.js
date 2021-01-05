@@ -9,13 +9,17 @@ export const SelectEye = styled.span`
   cursor: pointer;
   display: block;
   position: relative;
-  color: var(--text);
+  color: var(--navText);
   transition: color 200ms;
   position: relative;
   z-index: 4;
 
   &:hover {
-    color: var(--hover);
+    color: var(--navTextHover);
+  }
+
+  ${SelectWrapper}:hover & {
+    color: var(--navTextHover);
   }
 `
 
@@ -38,10 +42,9 @@ export const SelectOptions = styled.div`
   width: 8rem;
   top: -10rem;
   border-radius: 0 0 8px 8px;
-  border: solid #71a4d0 2px; 
+  border: solid var(--selectBorder) 2px; 
   border-top: none;
   transition: 400ms;
-
 
   ${SelectWrapper}:hover & {
     top: 0.8rem;
@@ -50,7 +53,7 @@ export const SelectOptions = styled.div`
 
 export const SelectItem = styled.div`
   cursor: pointer;
-  color: var(--text);
+  color: var(--navText);
   transition: color 200ms;
   padding: 1rem 0.8;
   display: flex;
@@ -61,7 +64,7 @@ export const SelectItem = styled.div`
   }
 
   &:hover {
-    color: var(--hover);
+    color: var(--navTextHover);
   }
 `
 
@@ -70,12 +73,12 @@ export const SelectIcon = styled.span`
   display: block;
   height: 1.4rem;
   width: 1.4rem;
-  color: var(--text);
+  color: var(--navText);
   transition: color 200ms;
   margin: 0 0.5rem 1.5rem 1rem;
 
   ${SelectItem}:hover & {
-    color: var(--hover);
+    color: var(--navTextHover);
   }
 `
 

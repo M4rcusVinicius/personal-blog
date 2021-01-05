@@ -28,7 +28,7 @@ export const PaginationLink = styled(Link)`
 
   &:hover {
     translate: 1px -2px;
-    background-color: var(--btnHover);
+    background-color: var(--buttonHover);
   }
 
 `
@@ -36,10 +36,10 @@ export const PaginationLink = styled(Link)`
 export const PaginationContainer = styled.div`
   display: flex;
   .active {
-    background-color: var(--btnHover);
+    background-color: var(--buttonHover);
   }
   .button {
-    background-color: #1d7930;
+    background-color: var(--buttonPagination);
   }
 
 `

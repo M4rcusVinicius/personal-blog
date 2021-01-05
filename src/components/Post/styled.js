@@ -7,7 +7,7 @@ export const PostWrapper = styled.section`
 `
 
 export const PostTitle = styled.h1`
-  color: var(--title);
+  color: var(--postTitle);
   font-size: 3.8rem;
   font-weight: 700;
   display: flex;
@@ -15,7 +15,7 @@ export const PostTitle = styled.h1`
 `
 
 export const PostInfo = styled.h1`
-  color: var(--text);
+  color: var(--postInfo);
   font-size: 1.5rem;
   font-weight: 600;
   display: flex;
@@ -28,7 +28,7 @@ export const PostArticle = styled.section`
 `
 
 export const PostDescription = styled.p`
-  color: var(--textSoft);
+  color: var(--postDescription);
   font-size: 1.5rem;
   font-weight: 600;
   background-color: var(--back);
@@ -51,7 +51,7 @@ export const PostContent = styled.div`
   .tags,
   iframe,
   .button-post {
-    color: var(--textSoft);
+    color: var(--postText);
     font-size: 1.25rem;
     font-weight: 300;
     line-height: 1.7;
@@ -66,7 +66,7 @@ export const PostContent = styled.div`
   h3,
   h4,
   h5 {
-    color: var(--subTitle);
+    color: var(--postSubTitle);
     margin: 2.4rem auto 1rem;
   }
   ul,
@@ -96,13 +96,13 @@ export const PostContent = styled.div`
     width: 100%;
   }
   blockquote {
-    color: var(--titleSoft);
-    border-left: 0.3rem solid var(--subTitle);
+    color: var(--postBlockquote);
+    border-left: 0.3rem solid var(--postBlockquoteBorder);
     padding: 0 1.875rem;
     margin: 3.125rem auto;
   }
   hr {
-    border: 1px solid var(--textSoft);
+    border: 1px solid var(--postText);
     margin: 3rem auto;
   }
   #twitter-widget-0,
@@ -158,8 +158,8 @@ export const PostContent = styled.div`
     margin: 1rem auto !important;
   }
   a {
-    border-bottom: 1px dashed var(--btnHover);
-    color: var(--btnHover);
+    border-bottom: 1px dashed var(--postLink);
+    color: var(--postLink);
     text-decoration: none;
     transition: opacity 0.5s;
     svg {

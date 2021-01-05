@@ -16,7 +16,7 @@ export const MenuFunctionLink = styled(Link)`
   height: var(--size);
   position: relative;
   width: var(--size);
-  color: var(--text);
+  color: var(--NavText);
   transition: color 200ms;
   position: relative;
   z-index: 4;
@@ -26,7 +26,7 @@ export const MenuFunctionLink = styled(Link)`
     }
   }
   &:hover {
-    color: var(--hover);
+    color: var(--NavTextHover);
   }
 `
 
@@ -37,7 +37,7 @@ export const MenuFunctionItem = styled.span`
   position: relative;
   width: var(--size);
   padding: 1rem;
-  color: var(--text);
+  color: var(--NavText);
   transition: color 200ms;
   position: relative;
   z-index: 4;
@@ -47,6 +47,6 @@ export const MenuFunctionItem = styled.span`
     }
   }
   &:hover {
-    color: var(--hover);
+    color: var(--NavTextHover);
   }
 `

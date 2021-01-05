@@ -12,7 +12,7 @@ export const NavLinksItem = styled.li`
   padding: 0 0.8rem;
 
   .active {
-    color: var(--hover);
+    color: var(--NavTextHover);
   }
 `
 
@@ -20,7 +20,7 @@ export const NavLinksLink = styled(Link)`
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
-  color: var(--text);
+  color: var(--NavText);
   position: relative;
   padding: 0.5rem 0.2rem;
   transition: color 400ms;
@@ -33,7 +33,7 @@ export const NavLinksLink = styled(Link)`
     height: 2px;
     left: 50%;
     position: absolute;
-    background: var(--hover);
+    background: var(--NavTextHover);
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }
@@ -44,11 +44,7 @@ export const NavLinksLink = styled(Link)`
   }
 
   &:hover {
-    color: var(--hover);
-  }
-
-  .active {
-    color: var(--hover);
+    color: var(--NavTextHover);
   }
 
 `
