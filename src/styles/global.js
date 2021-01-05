@@ -3,10 +3,6 @@ import { createGlobalStyle } from "styled-components"
 const GlobalStyles = createGlobalStyle`
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-  /* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-  */
 
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -67,9 +63,7 @@ const GlobalStyles = createGlobalStyle`
   	height: auto;
   }
 
-  body.light {}
-
-  body.cyber {
+  body.light {
     color: #C7CDD6;
 
     --back: #080A0B;
@@ -86,6 +80,52 @@ const GlobalStyles = createGlobalStyle`
     --btnHover: #1E60C2;
     --hover: #00b8e4;
     --shadow: black;
+  }
+
+  body.cyber {
+    color: #C7CDD6;
+
+    --back: #080A0B;
+    --bottom: #26282C;
+    --shadow: #26282C;
+    --hover: #26282C;
+
+    --button: #1e498a;
+    --buttonPagination: #1d7930;
+    --buttonHover: #1E60C2;
+    --linkHover: #10A1E8;
+    --link: #227BA6;
+    --icon: #1AABFF;
+    --cardText: #E8F4FA;
+    --card: #6B66F9;
+    --selectBorder: #71a4d0;
+    --postListTitle: #71a4d0;
+    --SearchInput: #fff;
+    
+    --title: #69CEE8;
+    --titleFeatured: #69cee8;
+    
+    --text: #E8F4FA;
+    --textIntense: #e8f4fa;
+    --textInfo: #69cee8;
+    --textLogo: #E8F4FA;
+    --navText: #e8f4fa;
+    --NavTextHover: #00b8e4;
+    --textSoft: #C7CDD6;
+    --textSoftTitle: #71A4D0;
+    --textDescription: #C7CDD6;
+    --textTitle: #E8F4FA;
+
+    --postTitle: #c7cdd6;
+    --postInfo: #69CEE8;
+    --postDescription: #C7CDD6;
+    --postSubTitle: #84B4E8;
+    --postBlockquote: #C7CDD6;
+    --postBlockquoteBorder: #84B4E8;
+    --postText: #C7CDD6;
+    --postListTitle: #26282C;
+    --postLink: #1E60C2;
+    
   }
 `
 export default GlobalStyles
