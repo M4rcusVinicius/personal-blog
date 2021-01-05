@@ -27,7 +27,7 @@ export const PaginationLink = styled(Link)`
   line-height: 2rem;
 
   &:hover {
-    translate: 1px -2px;
+    transform: translate(1px, -2px);
     background-color: var(--buttonHover);
   }
 

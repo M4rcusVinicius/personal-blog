@@ -14,7 +14,7 @@ export const NewPostItemWrapper = styled.div`
   margin: 4rem 0;
 
   &:hover {
-    translate: 2px -4px;
+    transform: translate(2px, -4px);
   }
 `
 

@@ -24,7 +24,7 @@ export const PostItemWrapper = styled.section`
   }
 
   &:hover {
-    translate: 2px -4px;
+    transform: translate(2px, -4px);
     box-shadow: -2px 4px 5px var(--shadow);
   }
 `
