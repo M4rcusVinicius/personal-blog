@@ -13,9 +13,9 @@ const HomePage = () => (
     <About />
     <Language />
     <NewPost />
-    <PostGroup category="trabalho"/>
-    <PostGroup category="redacao"/>
-    <PostGroup category="resumo"/>
+    <PostGroup category="robotica"/>
+    <PostGroup category="programacao"/>
+    <PostGroup category="projeto"/>
   </Layout>
 )
 

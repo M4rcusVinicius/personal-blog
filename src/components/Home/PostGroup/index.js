@@ -7,10 +7,10 @@ import * as S from './styled'
 
 const PostGroup = ({category}) => {
 
-  const { redacao, trabalho, resumo } = useStaticQuery(graphql`
+  const { robotica, programacao, projeto } = useStaticQuery(graphql`
     query {
-      redacao: allMarkdownRemark(
-        filter: {frontmatter: {category: {eq: "redacao"}}}
+      robotica: allMarkdownRemark(
+        filter: {frontmatter: {category: {eq: "robotica"}}}
         sort: { fields: frontmatter___date, order: DESC }
         limit: 6
         ) {
@@ -37,8 +37,8 @@ const PostGroup = ({category}) => {
           }
         }
       }
-      trabalho: allMarkdownRemark(
-        filter: {frontmatter: {category: {eq: "trabalho"}}}
+      programacao: allMarkdownRemark(
+        filter: {frontmatter: {category: {eq: "programacao"}}}
         sort: { fields: frontmatter___date, order: DESC }
         limit: 10
         ) {
@@ -65,8 +65,8 @@ const PostGroup = ({category}) => {
           }
         }
       }
-      resumo: allMarkdownRemark(
-        filter: {frontmatter: {category: {eq: "resumo"}}}
+      projeto: allMarkdownRemark(
+        filter: {frontmatter: {category: {eq: "projeto"}}}
         sort: { fields: frontmatter___date, order: DESC }
         limit: 10
         ) {
@@ -97,20 +97,24 @@ const PostGroup = ({category}) => {
   `)
 
   let postGroup = {}
+  let categoryName = ''
 
-  if (category === "resumo") {
-    postGroup = resumo.edges
-  } else if (category === "trabalho") {
-    postGroup = trabalho.edges
-  } else if (category === "redacao") {
-    postGroup = redacao.edges
+  if (category === "projeto") {
+    postGroup = projeto.edges
+    categoryName = 'Projeto'
+  } else if (category === "programacao") {
+    postGroup = programacao.edges
+    categoryName = 'Programação'
+  } else if (category === "robotica") {
+    postGroup = robotica.edges
+    categoryName = Robótica
   } else {
-    postGroup = redacao.edges
+    postGroup = robotica.edges
   }
 
   return ( 
   <S.PostGroupWrapper>
-      <S.PostGroupTitle><CaretRightSquare className="icon" /> {category} <S.Button to={category}><span>Ver mais</span></S.Button></S.PostGroupTitle>
+      <S.PostGroupTitle><CaretRightSquare className="icon" /> {categoryName} <S.Button to={category}><span>Ver mais</span></S.Button></S.PostGroupTitle>
 
     <S.PostGroupContent>
     {postGroup.slice(0, 6).map(
@@ -128,7 +132,7 @@ const PostGroup = ({category}) => {
             date={date}
             title={title}
             description={description}
-            category={category}
+            category={categoryName}
             subject={subject}
             timeToRead={timeToRead}
             image={image}

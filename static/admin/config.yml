@@ -27,7 +27,7 @@ collections:
           label: "Categoria",
           name: "category",
           widget: "select",
-          options: ["trabalho", "redacao", "resumo"]
+          options: ["robotica", "programacao", "projeto"]
         }
       - {
           label: "Linguagem de programação",

@@ -9,11 +9,11 @@ const links = [
   },
   {
     label: "Programação",
-    url: "/trabalho/",
+    url: "/programacao/",
   },
   {
     label: "Projetos",
-    url: "/projetos",
+    url: "/projetos/",
   },
   {
     label: "Sobre",
