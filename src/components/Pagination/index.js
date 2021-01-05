@@ -76,8 +76,6 @@ const Pagination = ({
           </S.PaginationLink>
         )}
         {pages.map((page, index) => {
-          console.log("URL: " + page.url)
-          console.log("Number: " + page.number)
           return (
             <S.PaginationLink to={page.url} key={i} activeClassName="active">
               {page.number}
