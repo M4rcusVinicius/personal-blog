@@ -19,7 +19,7 @@ export const AboutInfo = styled.div`
 
 export const AboutTitle = styled.h1`
   font-weight: 700;
-  color: var(--title);
+  color: var(--titleFeatured);
   font-size: 3rem;
   
   line-height: 1;
@@ -28,7 +28,7 @@ export const AboutTitle = styled.h1`
 
 export const AboutDescription = styled.p`
   font-weight: 500;
-  color: var(--soft);
+  color: var(--textSoft);
   font-size: 1.2rem;
   margin-top: 3.2rem;
 `
@@ -57,8 +57,8 @@ export const Button = styled.a`
   transition: 200ms;
 
   &:hover {
-    box-shadow: inset 0 0 20px var(--btnHover),0 0 10px var(--btnHover);
-    border: 2px solid var(--btnHover);
+    box-shadow: inset 0 0 20px var(--buttonHover),0 0 10px var(--buttonHover);
+    border: 2px solid var(--buttonHover);
     transform: scale(1.02);
   }
 `
