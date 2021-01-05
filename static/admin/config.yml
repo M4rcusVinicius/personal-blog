@@ -2,7 +2,7 @@ backend:
   name: github
   repo: M4rcusVinicius/personal-blog
   branch: main
-  site_domain: https://personal-blog.netlify.app/
+  site_domain: https://maquinadomundo.netlify.app/
 
 publish_mode: editorial_workflow
 media_folder: "../static/assets/img/"
@@ -30,10 +30,10 @@ collections:
           options: ["trabalho", "redacao", "resumo"]
         }
       - {
-          label: "Materia",
-          name: "subject",
+          label: "Linguagem de programação",
+          name: "language",
           widget: "select",
-          options: ["biologia", "filosofia", "fisica", "geografia", "historia", "portugues", "literatura", "matematica", "quimica", "ingles"]
+          options: ["Python", "Javascript", "React", "Python", "NodeJS", "GraphQL","Gatsby", "CSS", "HTML"]
         }
       - { label: "Imagem", name: "image", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
