@@ -57,10 +57,14 @@ export const Button = styled.a`
   transition: 200ms;
 
   &:hover {
-    box-shadow: inset 0 0 20px var(--buttonHover),0 0 10px var(--buttonHover);
+    box-shadow: inset 0 0 20px var(--buttonShadowHover),0 0 10px var(--buttonShadowHover);
     border: 2px solid var(--buttonHover);
-    transform: scale(1.02);
+    background-color: ${(props) => (props.primary ? 'var(--buttonHover)' : 'var(--buttonHoverSec)')};
+
   }
+  
+
+
 `
 
 export const AboutIcon = styled.div`

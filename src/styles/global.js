@@ -82,6 +82,52 @@ const GlobalStyles = createGlobalStyle`
     --shadow: black;
   }
 
+  body.dark {
+    color: #C7CDD6;
+
+    --back: #242526; //#080A0B;
+    --bottom: #18191a; //#26282C;
+    --shadow: //#26282C;
+    --hover: #26282C;
+
+    --button: #264e80; //#1e498a;
+    --buttonHover: #2374E1; //#1E60C2;
+    --buttonHoverSec: #2e3239; //#1E60C2;
+    --buttonPagination: //#1d7930;
+    --linkHover: #2e89ff; //#10A1E8;
+    --link: #2e89ff; //#227BA6;
+    --icon: #3999ff; //#1AABFF;
+    --cardText: #e4e6eb; //#E8F4FA;
+    --card: #242f3c; //#6B66F9;
+    --selectBorder: #2d88ff; //#71a4d0;
+    --postListTitle: #84b3a5; //#71a4d0;
+    --SearchInput: #fff;
+    
+    --title: #e4e6eb; //#69CEE8;
+    --titleFeatured: #e4e6eb; //#69cee8;
+    
+    --text: #E4E6EB; //#E8F4FA;
+    --textIntense: #e4e6eb; //#e8f4fa;
+    --textInfo: #3999ff; //#69cee8;
+    --textLogo: #e4e6eb; //#E8F4FA;
+    --navText: #b0b3b8; //#e8f4fa;
+    --NavTextHover: #2d88ff; //#00b8e4;
+    --textSoft: #b0b3b8;//#C7CDD6;
+    --textSoftTitle: #E4E6EB; //#71A4D0;
+    --textDescription: #E4E6EB; //#C7CDD6;
+    --textTitle: #E4E6EB; //#E8F4FA;
+
+    --postTitle: #E4E6EB; //#c7cdd6;
+    --postInfo: #3999ff; //#69CEE8;
+    --postDescription: #E4E6EB; //#C7CDD6;
+    --postSubTitle: #E4E6EB; //#84B4E8;
+    --postBlockquote: #E4E6EB; //#C7CDD6;
+    --postBlockquoteBorder: #2374E1; //#84B4E8;
+    --postText:#E4E6EB; //#C7CDD6;
+    --postListTitle: #E4E6EB; //#26282C;
+    --postLink: #2e89ff; //#1E60C2;
+  }
+
   body.cyber {
     color: #C7CDD6;
 
@@ -91,6 +137,7 @@ const GlobalStyles = createGlobalStyle`
     --hover: #26282C;
 
     --button: #1e498a;
+    --buttonShadowHover: #1E60C2;
     --buttonPagination: #1d7930;
     --buttonHover: #1E60C2;
     --linkHover: #10A1E8;
